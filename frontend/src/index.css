@@ -2,10 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
+/*  Fondo general */
 body {
-  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('/halloween-bg.jpg');
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url('/halloween-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
+  color: #fff; /* opcional: mejora contraste sobre el fondo */
+}
+
+/* Scrollbar personalizado */
+
+* {
+  scrollbar-color: oklch(70.5% 0.213 47.604) transparent !important; /* Fuerza el color */
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #fb923c; /* Naranja */
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #ea580c; /* Más oscuro al pasar el mouse */
 }
