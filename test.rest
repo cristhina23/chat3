@@ -1,0 +1,41 @@
+## signup
+POST http://localhost:5000/api/auth/signup
+Content-Type: application/json
+
+{
+  "fullName": "Criss Chacon",
+  "username": "criss23",
+  "email": "criss23@example.com",
+  "password": "123456",
+  "confirmPassword": "123456",
+  "gender": "female"
+}
+
+
+### login
+POST http://localhost:5000/api/auth/login
+Content-Type: application/json
+
+{
+  "username": "criss23",
+  "password": "123456"
+}
+
+### logout
+POST http://localhost:5000/api/auth/logout
+Content-Type: application/json
+
+### send message
+POST http://localhost:5000/api/messages/send/68f82c904977f2499f95e284
+Content-Type: application/json
+Cookie: jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2OGY4YjQyYzgxNDBkNTlmMDE0MmQzN2YiLCJpYXQiOjE3NjExMzQzNTMsImV4cCI6MTc2MjQzMDM1M30.OlosSx6be4LFLTBD8y103RcB6p24-7z9sr0VQCf6-SI
+
+{
+  "message": "eres mi principe"
+}
+
+### get message
+GET http://localhost:5000/api/messages/68f82c904977f2499f95e284
+
+### get ALL USERS
+GET http://localhost:5000/api/users/
